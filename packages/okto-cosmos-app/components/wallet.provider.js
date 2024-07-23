@@ -6,7 +6,7 @@ import { chains, assets } from 'chain-registry';
 // import { wallets as exodusWallets } from '@cosmos-kit/exodus';
 // import { wallets as coin98Wallets } from '@cosmos-kit/coin98-extension';
 import { wallets as oktoWallets } from '../../../wallets/okto-extension';
-import { wallets as leapWallets } from "../../../wallets/leap-extension";
+// import { wallets as leapWallets } from "../../../wallets/leap-extension";
 // import { wallets as cosmostationWallets } from "@cosmos-kit/cosmostation";
 // import { wallets as finWallets } from "@cosmos-kit/fin";
 
@@ -20,7 +20,7 @@ function CosmosApp({children}) {
         wallets={[
           // ...keplrWallets, 
           ...oktoWallets, 
-          ...leapWallets,
+          // ...leapWallets,
           // ...exodusWallets, 
           // ...coin98Wallets, 
           // ...cosmostationWallets, 
