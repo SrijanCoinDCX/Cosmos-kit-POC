@@ -1,0 +1,1 @@
+export declare const wallets: (import("@cosmos-kit/leap-extension").LeapExtensionWallet | import("@cosmos-kit/leap-metamask-cosmos-snap").MetamaskCosmosSnapWallet | import("@cosmos-kit/leap-mobile").LeapMobileWallet)[];
