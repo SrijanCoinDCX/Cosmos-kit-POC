@@ -2,7 +2,7 @@
 
 import { ChainProvider } from '@cosmos-kit/react';
 import { chains, assets } from 'chain-registry';
-// import { wallets as keplrWallets } from '@cosmos-kit/keplr';
+import { wallets as keplrWallets } from '@cosmos-kit/keplr';
 // import { wallets as exodusWallets } from '@cosmos-kit/exodus';
 // import { wallets as coin98Wallets } from '@cosmos-kit/coin98-extension';
 import { wallets as oktoWallets } from '../../../wallets/okto-extension';
@@ -18,7 +18,7 @@ function CosmosApp({children}) {
         chains={chains} // supported chains
         assetLists={assets} // supported asset lists
         wallets={[
-          // ...keplrWallets, 
+          ...keplrWallets, 
           ...oktoWallets, 
           ...leapWallets,
           // ...exodusWallets, 
