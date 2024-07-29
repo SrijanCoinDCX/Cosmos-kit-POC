@@ -10,6 +10,7 @@ class OktoExtensionWallet extends core_1.MainWalletBase {
         super(walletInfo, chain_wallet_1.ChainOktoExtension);
     }
     async initClient() {
+        console.log("init Client from dApp");
         this.initingClient();
         try {
             const okto = await (0, utils_1.getOktoFromExtension)();
@@ -21,4 +22,3 @@ class OktoExtensionWallet extends core_1.MainWalletBase {
     }
 }
 exports.OktoExtensionWallet = OktoExtensionWallet;
-//# sourceMappingURL=main-wallet.js.map

@@ -1,7 +1,6 @@
 /// <reference types="long" />
 import { AminoSignResponse, OfflineAminoSigner, StdSignature, StdSignDoc } from '@cosmjs/amino';
-import { OfflineDirectSigner, OfflineSigner } from '@cosmjs/proto-signing';
-import { DirectSignResponse } from '@cosmjs/proto-signing';
+import { OfflineDirectSigner, OfflineSigner, DirectSignResponse } from '@cosmjs/proto-signing';
 import { BroadcastMode } from '@cosmos-kit/core';
 import type { ChainInfo } from '@keplr-wallet/types';
 export interface Key {
@@ -32,13 +31,9 @@ export interface Okto {
     getOfflineSignerAuto(chainId: string): Promise<OfflineSigner>;
     signAmino(chainId: string, signer: string, signDoc: StdSignDoc, signOptions?: OktoSignOptions): Promise<AminoSignResponse>;
     signDirect(chainId: string, signer: string, signDoc: {
-        /** SignDoc bodyBytes */
         bodyBytes?: Uint8Array | null;
-        /** SignDoc authInfoBytes */
         authInfoBytes?: Uint8Array | null;
-        /** SignDoc chainId */
         chainId?: string | null;
-        /** SignDoc accountNumber */
         accountNumber?: Long | null;
     }, signOptions?: OktoSignOptions): Promise<DirectSignResponse>;
     signArbitrary(chainId: string, signer: string, data: string | Uint8Array): Promise<StdSignature>;

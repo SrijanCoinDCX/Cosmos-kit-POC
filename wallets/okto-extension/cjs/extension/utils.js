@@ -35,4 +35,3 @@ const getOktoFromExtension = async () => {
     });
 };
 exports.getOktoFromExtension = getOktoFromExtension;
-//# sourceMappingURL=utils.js.map

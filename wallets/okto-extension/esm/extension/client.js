@@ -29,12 +29,10 @@ export class OktoClient {
     async addChain(chainInfo) {
         const suggestChain = chainRegistryChainToKeplr(chainInfo.chain, chainInfo.assetList ? [chainInfo.assetList] : []);
         if (chainInfo.preferredEndpoints?.rest?.[0]) {
-            suggestChain.rest =
-                chainInfo.preferredEndpoints?.rest?.[0];
+            suggestChain.rest = chainInfo.preferredEndpoints?.rest?.[0];
         }
         if (chainInfo.preferredEndpoints?.rpc?.[0]) {
-            suggestChain.rpc =
-                chainInfo.preferredEndpoints?.rpc?.[0];
+            suggestChain.rpc = chainInfo.preferredEndpoints?.rpc?.[0];
         }
         await this.client.experimentalSuggestChain(suggestChain);
     }
@@ -51,6 +49,7 @@ export class OktoClient {
         };
     }
     async getAccount(chainId) {
+        console.log("getAccount from dApp", chainId);
         const key = await this.client.getKey(chainId);
         return {
             username: key.name,
@@ -69,10 +68,8 @@ export class OktoClient {
             default:
                 return this.getOfflineSignerAmino(chainId);
         }
-        // return this.client.getOfflineSignerAuto(chainId);
     }
     getOfflineSignerAmino(chainId) {
-        console.log("OFFLINE-SINGNER by dAPP (okto-extension)")
         return this.client.getOfflineSignerOnlyAmino(chainId);
     }
     getOfflineSignerDirect(chainId) {
@@ -94,4 +91,3 @@ export class OktoClient {
         return await this.client.sendTx(chainId, tx, mode);
     }
 }
-//# sourceMappingURL=client.js.map

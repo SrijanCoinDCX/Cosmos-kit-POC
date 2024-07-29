@@ -35,12 +35,10 @@ class OktoClient {
     async addChain(chainInfo) {
         const suggestChain = (0, keplr_1.chainRegistryChainToKeplr)(chainInfo.chain, chainInfo.assetList ? [chainInfo.assetList] : []);
         if (chainInfo.preferredEndpoints?.rest?.[0]) {
-            suggestChain.rest =
-                chainInfo.preferredEndpoints?.rest?.[0];
+            suggestChain.rest = chainInfo.preferredEndpoints?.rest?.[0];
         }
         if (chainInfo.preferredEndpoints?.rpc?.[0]) {
-            suggestChain.rpc =
-                chainInfo.preferredEndpoints?.rpc?.[0];
+            suggestChain.rpc = chainInfo.preferredEndpoints?.rpc?.[0];
         }
         await this.client.experimentalSuggestChain(suggestChain);
     }
@@ -57,6 +55,7 @@ class OktoClient {
         };
     }
     async getAccount(chainId) {
+        console.log("getAccount from dApp", chainId);
         const key = await this.client.getKey(chainId);
         return {
             username: key.name,
@@ -75,7 +74,6 @@ class OktoClient {
             default:
                 return this.getOfflineSignerAmino(chainId);
         }
-        // return this.client.getOfflineSignerAuto(chainId);
     }
     getOfflineSignerAmino(chainId) {
         return this.client.getOfflineSignerOnlyAmino(chainId);
@@ -100,4 +98,3 @@ class OktoClient {
     }
 }
 exports.OktoClient = OktoClient;
-//# sourceMappingURL=client.js.map

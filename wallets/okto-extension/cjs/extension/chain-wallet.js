@@ -8,4 +8,3 @@ class ChainOktoExtension extends core_1.ChainWalletBase {
     }
 }
 exports.ChainOktoExtension = ChainOktoExtension;
-//# sourceMappingURL=chain-wallet.js.map

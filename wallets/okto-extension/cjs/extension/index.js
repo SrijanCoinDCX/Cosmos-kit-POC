@@ -18,4 +18,3 @@ __exportStar(require("./chain-wallet"), exports);
 __exportStar(require("./main-wallet"), exports);
 __exportStar(require("./registry"), exports);
 __exportStar(require("./types"), exports);
-//# sourceMappingURL=index.js.map

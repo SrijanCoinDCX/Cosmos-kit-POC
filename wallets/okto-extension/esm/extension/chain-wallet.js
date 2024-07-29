@@ -4,4 +4,3 @@ export class ChainOktoExtension extends ChainWalletBase {
         super(walletInfo, chainInfo);
     }
 }
-//# sourceMappingURL=chain-wallet.js.map

@@ -31,4 +31,3 @@ export const getOktoFromExtension = async () => {
         document.addEventListener('readystatechange', documentStateChange);
     });
 };
-//# sourceMappingURL=utils.js.map

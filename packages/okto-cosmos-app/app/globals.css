@@ -84,43 +84,36 @@ body {
   margin-top: 8rem;
 }
 
-@media screen and (max-width: 768px) {
-  #avatarImage{
-    display: none;
-  }
-
-  .bg{
-    background-size: cover;
-  }
-  
-  .container{
-    margin: 1rem;
-    background-color: #2504fddc;
-  }
-}
-
-#bitcoin{
-  height: 10rem;
-  width: 10rem;
-  margin-top: 8rem;
-
-}
-
-.container {
+.btn-list{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  background-color: #201b42dc;
-  border-radius: 50px;
-  padding: 3.5rem 10rem;
-  width: fit-content;
-  margin: 0 5rem;
+
 }
 
-h1 {
-  letter-spacing: 6px;
-  font-weight: bolder;
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  }
+
+  .App-header {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  #bitcoin {
+    margin-top: 4rem;
+  }
 }
 
 p {
@@ -128,3 +121,4 @@ p {
   margin: 2rem 0;
   font-size: 18px;
 }
+
